@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+
+:root {
+    /* Primary */
+    --PrimaryLightRed: hsl(0, 100%, 67%);
+    --PrimaryOrangeYellow: hsl(39, 100%, 56%);
+    --PrimaryGreenTeal: hsl(166, 100%, 37%);
+    --PrimaryCobaltBlue: hsl(234, 85%, 45%);
+
+    /* Gradient */
+    --BackLightSlateBlue: hsl(252, 100%, 67%);
+    --BackRoyalBlue: hsl(241, 81%, 54%);
+
+    --BackVioletBlueCircle: hsla(256, 72%, 46%, 1);
+    --BackPersianBlueCircle: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+
+    --NeutralPaleBlue: hsl(221, 100%, 96%);
+    --NeutralLightLavender: hsl(241, 100%, 89%);
+    --NeutralDarkGrayBlue: hsl(224, 30%, 27%);
+}
+
+
+
+
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 358px;
+    border-radius: 0px 0px 35px 35px;
+    box-shadow: 0px 1px 1px var(--BackRoyalBlue);
+
+    color: white;
+    background-image: linear-gradient(to bottom, var(--BackLightSlateBlue), var(--BackRoyalBlue) 260px);
+}
+
+
+header>section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 270px;
+    padding: 10px 0px 20px;
+}
+
+header>section p,
+h1 {
+    color: var(--NeutralLightLavender);
+    font-weight: 500;
+    font-size: 1em;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+/* Circle */
+header>section>.circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    padding: 8px;
+
+
+    background-image: linear-gradient(to bottom, var(--BackVioletBlueCircle), var(--BackPersianBlueCircle));
+}
+
+/* Highlight paragraphs */
+header>section p:nth-child(odd) {
+    color: white;
+}
+
+header>section p:nth-child(1) {
+    font-weight: 800;
+    font-size: 2.8em;
+    margin-bottom: -10px;
+}
+
+header>section p:nth-child(3) {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+
+/* ----------------------------------------------------------- */
+/* Summary */
+main {
+    width: 300px;
+}
+
+main>h2 {
+    font-size: 1.2em;
+}
+
+main>ul>li>span.result {
+    color: lightgray;
+}
+
+main>ul>li>span.result>strong {
+    font-weight: 800;
+    color: black;
+}
+
+main>ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+
+
+    padding: 0px;
+    text-indent: 10px;
+    text-align: center;
+}
+
+main>ul>li {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 10px 0px;
+    padding: 10px;
+
+    border-radius: 10px;
+}
+
+/* Elements Summary */
+main li#red {
+    color: var(--PrimaryLightRed);
+    background-color: hsla(0, 100%, 67%, 0.05);
+}
+
+main li#yellow {
+    color: var(--PrimaryOrangeYellow);
+    background-color: hsla(39, 100%, 56%, 0.05);
+}
+
+main li#green {
+    color: var(--PrimaryGreenTeal);
+    background-color: hsla(166, 100%, 37%, 0.05);
+}
+
+main li#blue {
+    color: var(--PrimaryCobaltBlue);
+    background-color: hsla(234, 85%, 45%, 0.05);
+}
+
+
+main li#red::before {
+    content: url(../assets/images/icon-reaction.svg);
+    margin-right: -42%;
+}
+
+main li#yellow::before {
+    content: url(../assets/images/icon-memory.svg);
+    margin-right: -42%;
+}
+
+main li#green::before {
+    content: url(../assets/images/icon-verbal.svg);
+    margin-right: -42%;
+}
+
+main li#blue::before {
+    content: url(../assets/images/icon-visual.svg);
+    margin-right: -42%;
+}
+
+/* Button - Continue */
+main p#continue {
+    background-color: var(--NeutralDarkGrayBlue);
+    color: white;
+
+    padding: 10px;
+    border-radius: 1.5em;
+}
+
+main p#continue:hover {
+    background-color: var(--BackVioletBlueCircle);
+    cursor: pointer;
+}
+
+/* ----------------------------------------------------------- */
+
+footer>.attribution>p {
+    width: 328px;
+    margin: 0px;
+    padding: 10px 15px;
+    font-size: 0.8em;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+
+    background-color: var(--BackRoyalBlue);
+    color: var(--NeutralLightLavender);
+}
+
+footer>.attribution>p>a {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+footer>.attribution>p>a:hover {
+    text-decoration: underline;
+}
