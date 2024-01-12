@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main > h1{
+            text-align: center;
+            
+        }
+        section{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        table {
+            display: inline;
+            border-collapse: collapse;
+            margin-right: 20px;
+        }
+
+        th {
+            font-size: 1.3em;
+        }
+
+        td {
+            width: 350px;
+            font-size: 1.2em;
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightgray;
+        }
+
+        td:hover {
+            border: 2px solid red;
+        }
+
+        a {
+            color: blue;
+            text-shadow: 1px 0px 1px rgba(0, 0, 255, 0.192);
+        }
+
+        a:hover {
+            color: red;
+            transition: 0.1s;
+        }
+
+        a:active {
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>My Projects</h1>
+        <section>
+            <table>
+                <tr>
+                    <th>Projects</th>
+                </tr>
+                <tr>
+                    <td><a href="Android_Project/index.html" target="_blank">Android_Project</a></td>
+                </tr>
+                <tr>
+                    <td><a href="Cordel_Project/index.html" target="_blank">Cordel_Project</a></td>
+                </tr>
+                <tr>
+                    <td><a href="Login_Project/index.html" target="_blank">Login_Project</a></td>
+                </tr>
+                <tr>
+                    <td><a href="QrCode_Project/index.html" target="_blank">QrCode_Project</a></td>
+                </tr>
+                <tr>
+                    <td><a href="Results_Summary_Project/index.html" target="_blank">Results_Summary_Project</a></td>
+                </tr>
+                <tr>
+                    <td><a href="Social_Project/index.html" target="_blank">Social_Project</a></td>
+                </tr>
+            </table>
+        </section>
+
+    </main>
+</body>
+</html>
